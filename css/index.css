@@ -1,0 +1,205 @@
+/* 全体スタイル */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  margin: 0;
+  padding-bottom: 60px;
+}
+
+h1 {
+  color: #ffffff;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* ガチャボタン */
+.gacha-button {
+  background-color: #333333;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 12px 25px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.gacha-button:hover {
+  background-color: #555555;
+  transform: scale(1.05);
+}
+
+/* ガチャ結果カード */
+.card {
+  display: none;
+  margin-top: 20px;
+  padding: 15px;
+  border: 2px solid #555555;
+  border-radius: 10px;
+  background-color: #333333;
+  width: 250px;
+  text-align: center;
+  color: #ffffff;
+  transition: box-shadow 0.3s ease;
+}
+
+.card img {
+  width: 80%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #444444;
+}
+
+.card-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.card-detail {
+  font-size: 14px;
+  color: #bbbbbb;
+  margin-top: 5px;
+}
+
+/* カードのアニメーション */
+@keyframes cardAppear {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.card.show {
+  display: block;
+  animation: cardAppear 0.4s ease-out;
+}
+
+/* アンダーメニュー */
+.bottom-menu {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: #333333;
+  padding: 10px 0;
+  border-top: 1px solid #555555;
+}
+
+.menu-item {
+  text-decoration: none;
+  font-size: 18px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.menu-item:hover {
+  color: #bbbbbb;
+}
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+  .gacha-button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .card {
+    width: 200px;
+  }
+}
+
+/* タイマー表示 */
+.timer {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #333333;
+  color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  max-width: 150px;
+  /* 最大幅を広げる */
+  line-height: 1.2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  white-space: normal;
+}
+
+/* ガチャが引けます！の表示 */
+.timer.ready {
+  white-space: nowrap;
+  /* 改行をさせない */
+  max-width: 150px;
+  /* 改行しないよう幅を広くする */
+}
+
+/* スマホ表示でのタイマー調整 */
+@media (max-width: 768px) {
+  .timer {
+    font-size: 12px;
+    max-width: 120px;
+    /* 最大幅をスマホ用に調整 */
+    padding: 6px 10px;
+    top: 5px;
+    right: 5px;
+  }
+}
+
+/* auth-links (新規登録/ログインリンク) */
+.auth-links {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #333333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.auth-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.auth-links a:hover {
+  color: #cccccc;
+}
+
+/* auth-links のレスポンシブ対応 */
+@media (max-width: 768px) {
+  .auth-links {
+    top: 5px;
+    left: 5px;
+    padding: 3px 8px;
+  }
+
+  .auth-links a {
+    font-size: 14px;
+  }
+}

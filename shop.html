@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ショップ</title>
+  <link rel="stylesheet" href="css/shop.css">
+</head>
+
+<body>
+  <h1>ショップ</h1>
+  <div id="shop-items" class="shop-items">
+    <div class="item">
+      <h2>⌛ 時間スキップアイテム</h2>
+      <p>次のガチャ引ける時間をリセットします。</p>
+      <button onclick="purchaseItem()">購入する</button>
+      <button onclick="watchAd()">広告を見る</button>
+    </div>
+  </div>
+
+  <!-- 広告視聴ポップアップ -->
+  <div id="ad-popup" class="popup" style="display: none;">
+    <div class="popup-content">
+      <img src="images/ad_banner.png" alt="広告バナー" class="ad-image">
+      <div class="popup-controls">
+        <span id="ad-countdown">5秒</span>
+        <span id="ad-close-button" class="close-button" onclick="closeAdPopup()">×</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- メッセージポップアップ -->
+  <div id="popup" class="popup" style="display: none;">
+    <div class="popup-content">
+      <span class="close-button" onclick="closePopup()">×</span>
+      <p id="popup-message">メッセージ</p>
+    </div>
+  </div>
+
+  <!-- アンダーメニュー -->
+  <nav class="bottom-menu">
+    <a href="index.html" class="menu-item">🏠 TOP</a>
+    <a href="collection.html" class="menu-item">📁 コレクション</a>
+    <a href="items.html" class="menu-item">🎁 アイテム一覧</a>
+    <a href="shop.html" class="menu-item">🛒 ショップ</a>
+  </nav>
+
+  <script src="js/shop.js"></script>
+</body>
+
+</html>

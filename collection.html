@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>コレクション</title>
+  <link rel="stylesheet" href="css/collection.css">
+</head>
+
+<body>
+  <h1>コレクション</h1>
+  <div id="collection" class="collection-container"></div>
+
+  <!-- 詳細ポップアップ -->
+  <div id="card-popup" class="card-popup" style="display: none;">
+    <div class="popup-content">
+      <span class="close-button" onclick="closePopup()">×</span>
+      <img id="popup-image" src="" alt="カード画像">
+      <h2 id="popup-name">カード名</h2>
+      <p id="popup-detail">カードの詳細</p>
+    </div>
+  </div>
+
+  <!-- アンダーメニュー -->
+  <nav class="bottom-menu">
+    <a href="index.html" class="menu-item">🏠 TOP</a>
+    <a href="collection.html" class="menu-item">📁 コレクション</a>
+    <a href="items.html" class="menu-item">🎁 アイテム一覧</a>
+    <a href="shop.html" class="menu-item">🛒 ショップ</a>
+  </nav>
+
+  <script src="js/collection.js"></script>
+</body>
+
+</html>

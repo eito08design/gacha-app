@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ガチャガチャシステム</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <!-- 新規登録/ログインリンク -->
+  <div id="auth-links" class="auth-links">
+    <a href="login.html">新規登録/ログイン</a>
+  </div>
+
+  <h1>毎日引けるガチャ</h1>
+
+  <!-- タイマー表示 -->
+  <div id="timer" class="timer"></div>
+
+  <button class="gacha-button" onclick="drawGacha()">ガチャを引く</button>
+
+  <div id="card" class="card">
+    <img id="cardImage" src="" alt="ガチャ結果">
+    <div id="cardName" class="card-name"></div>
+    <div id="cardDetail" class="card-detail"></div>
+  </div>
+
+  <!-- アンダーメニュー -->
+  <nav class="bottom-menu">
+    <a href="index.html" class="menu-item">🏠 TOP</a>
+    <a href="collection.html" class="menu-item">📁 コレクション</a>
+    <a href="items.html" class="menu-item">🎁 アイテム一覧</a>
+    <a href="shop.html" class="menu-item">🛒 ショップ</a>
+  </nav>
+
+  <script src="js/index.js"></script>
+</body>
+
+</html>
