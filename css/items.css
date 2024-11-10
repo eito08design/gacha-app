@@ -1,3 +1,4 @@
+
 body {
   display: flex;
   align-items: center;
@@ -17,12 +18,13 @@ h1 {
 }
 
 .item-list {
-  width: 90%;
-  max-width: 600px;
+  width: 100%;
+  max-width: 800px;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
   gap: 15px;
+  padding: 0 10px;
 }
 
 .item {
@@ -70,18 +72,15 @@ h1 {
   border-radius: 5px;
   cursor: pointer;
   font-size: 14px;
-  margin: 0 auto;
-  /* 中央揃え */
   margin-top: 10px;
   display: block;
-  /* 中央揃えのためのブロック表示 */
 }
 
 .item button:hover {
   background-color: #777777;
 }
 
-/* レスポンシブ対応 */
+/* Responsive Design */
 @media (max-width: 768px) {
   .item {
     flex-direction: column;
@@ -106,7 +105,7 @@ h1 {
   }
 }
 
-/* アンダーメニュー */
+/* Bottom Menu */
 .bottom-menu {
   position: fixed;
   bottom: 0;
@@ -129,72 +128,4 @@ h1 {
 
 .menu-item:hover {
   color: #bbbbbb;
-}
-/* Mobile (up to 768px) */
-@media (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
-
-  h1, h2 {
-    font-size: 20px;
-  }
-
-  .gacha-button,
-  .menu-item,
-  button {
-    font-size: 14px;
-    padding: 10px;
-  }
-
-  .card, .item, .popup-content, .login-container, .shop-items, .collection-container {
-    width: 90%;
-    margin: auto;
-  }
-}
-
-/* Tablet (768px to 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-  body {
-    font-size: 16px;
-  }
-
-  h1, h2 {
-    font-size: 22px;
-  }
-
-  .gacha-button,
-  .menu-item,
-  button {
-    font-size: 16px;
-    padding: 12px;
-  }
-
-  .card, .item, .popup-content, .login-container, .shop-items, .collection-container {
-    width: 80%;
-    margin: auto;
-  }
-}
-
-/* PC/Desktop (above 1024px) */
-@media (min-width: 1025px) {
-  body {
-    font-size: 18px;
-  }
-
-  h1, h2 {
-    font-size: 24px;
-  }
-
-  .gacha-button,
-  .menu-item,
-  button {
-    font-size: 18px;
-    padding: 15px;
-  }
-
-  .card, .item, .popup-content, .login-container, .shop-items, .collection-container {
-    width: 60%;
-    margin: auto;
-  }
 }
