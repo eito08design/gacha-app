@@ -1,3 +1,4 @@
+
 /* 全体スタイル */
 body {
   display: flex;
@@ -73,29 +74,12 @@ h1 {
   margin-top: 5px;
 }
 
-/* カードのアニメーション */
-@keyframes cardAppear {
-  from {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-.card.show {
-  display: block;
-  animation: cardAppear 0.4s ease-out;
-}
-
 /* アンダーメニュー */
 .bottom-menu {
   position: fixed;
   bottom: 0;
   width: 100%;
+  max-width: 600px;
   display: flex;
   justify-content: space-around;
   background-color: #333333;
@@ -125,81 +109,5 @@ h1 {
 
   .card {
     width: 200px;
-  }
-}
-
-/* タイマー表示 */
-.timer {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: #333333;
-  color: #ffffff;
-  padding: 8px 12px;
-  border-radius: 5px;
-  font-size: 14px;
-  font-weight: bold;
-  text-align: center;
-  max-width: 150px;
-  /* 最大幅を広げる */
-  line-height: 1.2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  white-space: normal;
-}
-
-/* ガチャが引けます！の表示 */
-.timer.ready {
-  white-space: nowrap;
-  /* 改行をさせない */
-  max-width: 150px;
-  /* 改行しないよう幅を広くする */
-}
-
-/* スマホ表示でのタイマー調整 */
-@media (max-width: 768px) {
-  .timer {
-    font-size: 12px;
-    max-width: 120px;
-    /* 最大幅をスマホ用に調整 */
-    padding: 6px 10px;
-    top: 5px;
-    right: 5px;
-  }
-}
-
-/* auth-links (新規登録/ログインリンク) */
-.auth-links {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background-color: #333333;
-  padding: 5px 10px;
-  border-radius: 5px;
-  text-align: center;
-}
-
-.auth-links a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 16px;
-}
-
-.auth-links a:hover {
-  color: #cccccc;
-}
-
-/* auth-links のレスポンシブ対応 */
-@media (max-width: 768px) {
-  .auth-links {
-    top: 5px;
-    left: 5px;
-    padding: 3px 8px;
-  }
-
-  .auth-links a {
-    font-size: 14px;
   }
 }
